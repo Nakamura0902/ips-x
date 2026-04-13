@@ -1,0 +1,335 @@
+/* ============================================
+   DDS iPS-X LP — カスタムスタイル
+   ============================================ */
+
+/* ----------------------------------------
+   基本リセット / ユーティリティ
+---------------------------------------- */
+::selection {
+  background-color: #fbe0a4;
+  color: #040c21;
+}
+
+/* ----------------------------------------
+   ヒーローセクション
+---------------------------------------- */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100svh;
+  min-height: 100vh; /* fallback */
+}
+
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* 下から濃くなるグラデーションオーバーレイ */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(4, 12, 33, 0.08) 0%,
+    rgba(4, 12, 33, 0.0)  20%,
+    rgba(4, 12, 33, 0.45) 60%,
+    rgba(4, 12, 33, 0.92) 100%
+  );
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 2rem 2rem 6rem; /* bottom: ボトムナビ分を確保 */
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    padding: 2rem 3rem 5rem;
+    max-width: 640px;
+  }
+}
+
+/* ----------------------------------------
+   信頼バッジ
+---------------------------------------- */
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  color: #705c2d;
+  border: 1px solid rgba(112, 92, 45, 0.35);
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  white-space: nowrap;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ----------------------------------------
+   ピラー（番号付きフィーチャー）
+---------------------------------------- */
+.pillar-number {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(4, 12, 33, 0.06);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.pillar-item {
+  position: relative;
+  padding-top: 2rem;
+}
+
+/* ----------------------------------------
+   ダークフィーチャーセクション（IMG_4266）
+---------------------------------------- */
+.dark-feature {
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
+}
+
+.dark-feature-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dark-feature-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 12, 33, 0.62);
+}
+
+.dark-feature-content {
+  position: relative;
+  z-index: 1;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* ゴールドの区切り線 */
+.gold-divider {
+  width: 3rem;
+  height: 1px;
+  background-color: #dec48b;
+  margin: 1.5rem auto;
+}
+
+/* ----------------------------------------
+   サイエンス（半割レイアウト）
+---------------------------------------- */
+.science-section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .science-section {
+    flex-direction: row;
+    min-height: 80vh;
+  }
+}
+
+.science-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .science-img-wrap {
+    width: 42%;
+    aspect-ratio: auto;
+    min-height: 80vh;
+  }
+}
+
+.science-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.science-text {
+  background-color: #1a2238;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .science-text {
+    width: 58%;
+    padding: 5rem 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .science-text {
+    padding: 6rem 6rem;
+  }
+}
+
+/* ----------------------------------------
+   主要成分
+---------------------------------------- */
+.ingredient-item {
+  border-left: 2px solid #dec48b;
+  padding-left: 1rem;
+}
+
+/* ----------------------------------------
+   こんな方におすすめ
+---------------------------------------- */
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: rgba(4, 12, 33, 0.72);
+}
+
+.check-icon {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 1px solid #dec48b;
+  background-color: #fbe0a4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #705c2d;
+  font-size: 0.625rem;
+  font-weight: bold;
+}
+
+/* ----------------------------------------
+   在庫煽り帯
+---------------------------------------- */
+.urgency-bar {
+  background-color: #1a2238;
+  color: #dec48b;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ----------------------------------------
+   CTAセクション（S__66068555）
+---------------------------------------- */
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+}
+
+.cta-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(4, 12, 33, 0.75) 0%,
+    rgba(4, 12, 33, 0.60) 40%,
+    rgba(4, 12, 33, 0.80) 100%
+  );
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* ----------------------------------------
+   FAQ アコーディオン
+---------------------------------------- */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon {
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+details[open] > summary .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* ----------------------------------------
+   ボトムナビ Safe Area（iOS）
+---------------------------------------- */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .bottom-nav {
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* ----------------------------------------
+   スクロール挙動
+---------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------------------------------------
+   最大幅コンテナ（ワイド画面）
+---------------------------------------- */
+.lp-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
