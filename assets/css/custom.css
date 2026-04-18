@@ -319,6 +319,32 @@ details[open] > summary .faq-icon {
 }
 
 /* ----------------------------------------
+   モバイル画像クロップ調整
+   portrait viewport では portrait 画像が全体表示になるため
+   scale でズームインして PC版と同様のフレーミングに揃える
+---------------------------------------- */
+@media (max-width: 767px) {
+
+  /* ヒーロー: 顔のアップに近づける */
+  .hero-img {
+    transform: scale(1.35);
+    transform-origin: top center;
+  }
+
+  /* ダークフィーチャー(DNA): 中央を拡大 */
+  .dark-feature-img {
+    transform: scale(1.3);
+    transform-origin: center center;
+  }
+
+  /* CTA: 上部のUI要素を隠し、モデル・製品部分にフォーカス */
+  .cta-img {
+    transform: scale(1.5) translateY(-8%);
+    transform-origin: center center;
+  }
+}
+
+/* ----------------------------------------
    スクロール挙動
 ---------------------------------------- */
 html {
