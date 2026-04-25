@@ -347,6 +347,11 @@ details[open] > summary .faq-icon {
   .science-section {
     gap: 2rem;
   }
+
+  /* サイエンス画像: iPSテキストを少し下に下げる */
+  .science-img {
+    object-position: center 25%;
+  }
 }
 
 /* ----------------------------------------
