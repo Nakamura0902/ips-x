@@ -342,6 +342,16 @@ details[open] > summary .faq-icon {
     transform: scale(1.5) translateY(-8%);
     transform-origin: center center;
   }
+
+  /* サイエンス画像: 上部の焼き込みテキストを隠し試験管エリアを表示 */
+  .science-img {
+    object-position: center 65%;
+  }
+
+  /* サイエンスセクション上部に余白 */
+  .science-img-wrap {
+    margin-top: 2rem;
+  }
 }
 
 /* ----------------------------------------
