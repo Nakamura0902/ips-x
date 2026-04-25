@@ -343,11 +343,6 @@ details[open] > summary .faq-icon {
     transform-origin: center center;
   }
 
-  /* サイエンス: 画像とテキストブロックの間に余白 */
-  .science-section {
-    gap: 2rem;
-  }
-
   /* サイエンス画像: iPSテキストを少し下に下げる */
   .science-img {
     object-position: center 25%;
